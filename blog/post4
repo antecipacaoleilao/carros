@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Venda de veículos novos no Brasil cresce em julho com antecipação de compra - Blog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
+      <nav class="hidden md:flex space-x-6">
+        <a href="../index.html" class="hover:text-blue-600">Início</a>
+        <a href="../agenda.html" class="hover:text-blue-600">Agenda</a>
+        <a href="../editais.html" class="hover:text-blue-600">Editais</a>
+        <a href="../documentos.html" class="hover:text-blue-600">Documentos</a>
+        <a href="../leiloes.html" class="hover:text-blue-600">Leilões</a>
+        <a href="../contato.html" class="hover:text-blue-600">Contato</a>
+        <a href="index.html" class="font-bold text-blue-600">Blog</a>
+      </nav>
+      <button id="menu-toggle" class="md:hidden flex flex-col space-y-1">
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-100 px-4 py-2 space-y-2">
+      <a href="../index.html" class="block hover:text-blue-600">Início</a>
+      <a href="../agenda.html" class="block hover:text-blue-600">Agenda</a>
+      <a href="../editais.html" class="block hover:text-blue-600">Editais</a>
+      <a href="../documentos.html" class="block hover:text-blue-600">Documentos</a>
+      <a href="../leiloes.html" class="block hover:text-blue-600">Leilões</a>
+      <a href="../contato.html" class="block hover:text-blue-600">Contato</a>
+      <a href="index.html" class="block hover:text-blue-600">Blog</a>
+    </div>
+  </header>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      toggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    });
+  </script>
+
+  <!-- Conteúdo do post -->
+  <article class="container mx-auto py-12 px-4 max-w-3xl bg-white rounded-lg shadow">
+    <img src="../img/blog/post4.jpg" alt="Carros novos Brasil julho 2025" class="w-full h-64 object-cover rounded-t-lg">
+
+    <div class="p-6 space-y-4">
+      <h2 class="text-3xl font-bold">Venda de veículos novos no Brasil cresce em julho com antecipação de compra</h2>
+      <p class="text-gray-600 text-sm">Publicado em 04 de agosto de 2025 • leitura de 4 min</p>
+
+      <p>Dados recentes mostram que as vendas de veículos novos no Brasil tiveram alta em julho. Esse crescimento foi impulsionado por antecipações nas compras, motivadas por expectativas de aumento nos preços e nas taxas, além de incentivos fiscais. A redução do IPI automotivo fez parte das medidas que estimularam os consumidores. </p>
+
+      <h3 class="text-2xl font-semibold">Motivos da antecipação</h3>
+      <p>A expectativa de alta nos custos, taxas e preços fez com que muitas pessoas adiantassem suas compras antes que agravamentos econômicos tornassem os veículos mais caros. Além disso, políticas de incentivo, promoções e condições especiais de financiamento ajudaram nesse movimento.</p>
+
+      <h3 class="text-2xl font-semibold">Impactos para o mercado</h3>
+      <ul class="list-disc pl-6 space-y-2">
+        <li>Aumento na produção e nas vendas para atender a demanda antecipada;</li>
+        <li>Possível pressão sobre os preços de estoque e logística;</li>
+        <li>Estimativa de crescimento anual do setor se mantiverem as condições fiscais favoráveis e a oferta de crédito;</li>
+      </ul>
+
+      <h3 class="text-2xl font-semibold">Desafios</h3>
+      <p>Mesmo com o crescimento, o setor automotivo ainda enfrenta desafios como inflação, flutuações cambiais, e custos de importação. Esses fatores podem levar a aumentos inesperados nos preços se não forem administrados. Além disso, compradores com menor poder de compra podem ser afetados liderando a demanda por veículos mais acessíveis.</p>
+
+      <h3 class="text-2xl font-semibold">Perspectivas</h3>
+      <p>Para os próximos meses, espera-se que enquanto houver expectativa de alta nos custos ou impostos, a antecipação continue sendo uma estratégia para muitos consumidores. Promoções e incentivos podem manter esse impulso, mas o mercado precisa estar atento a riscos macroeconômicos e à oferta de crédito.</p>
+
+      <p>Fontes: <a href="https://www.cnnbrasil.com.br/economia/macroeconomia/venda-de-veiculos-novos-no-brasil-cresce-em-julho-com-antecipacao-de-compra/" target="_blank" class="text-blue-600 hover:underline">CNN Brasil</a></p>
+    </div>
+  </article>
+
+  <!-- Rodapé -->
+  <footer class="bg-white shadow mt-12">
+    <div class="container mx-auto text-center p-6 text-gray-600">
+      <p>© 2025 Leilão Antecipado. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
