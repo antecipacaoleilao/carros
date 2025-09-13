@@ -24,9 +24,9 @@
   </header>
 
   <!-- Banner -->
-  <section class="relative h-96 overflow-hidden">
-    <img src="img/toyota-corolla-2019.jpg" alt="Banner de leilão" class="absolute inset-0 w-full h-full object-cover opacity-70">
-    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
+  <section class="relative h-96">
+    <img src="img/banner.jpg" alt="Banner de carros"
+         class="absolute inset-0 w-full h-full object-cover opacity-70">
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
       <h2 class="text-4xl font-bold mb-4">Leilão Antecipado</h2>
       <p class="text-lg mb-6">Os melhores veículos com condições exclusivas</p>
@@ -34,36 +34,41 @@
     </div>
   </section>
 
-  <!-- Destaques com imagens locais -->
-  <section class="container mx-auto py-12 px-4">
+  <!-- Destaques -->
+  <section class="container mx-auto py-12">
     <h3 class="text-2xl font-semibold text-center mb-8">Destaques do Leilão</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
-      <!-- Carro 1 -->
-      <div class="bg-white rounded-lg shadow overflow-hidden">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+
+      <!-- Civic (esquerda) -->
+      <div class="bg-white rounded-lg shadow overflow-hidden relative">
         <img src="img/honda-civic-2020.jpg" alt="Honda Civic 2020" class="w-full h-48 object-cover">
+        <span class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 rounded-md font-bold">R$ 45.000</span>
         <div class="p-4">
-          <h4 class="font-bold">Honda Civic 2020</h4>
-          <p class="text-gray-600">Lance inicial: R$ 45.000</p>
+          <h4 class="font-bold text-lg">Honda Civic 2020</h4>
+          <p class="text-gray-600 mt-1">Lance inicial</p>
         </div>
       </div>
 
-      <!-- Carro 2 -->
-      <div class="bg-white rounded-lg shadow overflow-hidden">
+      <!-- Ford Ka (meio) -->
+      <div class="bg-white rounded-lg shadow overflow-hidden relative">
+        <img src="img/ford-ka-2021.jpg" alt="Ford Ka 2021" class="w-full h-48 object-cover">
+        <span class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 rounded-md font-bold">R$ 28.000</span>
+        <div class="p-4">
+          <h4 class="font-bold text-lg">Ford Ka 2021</h4>
+          <p class="text-gray-600 mt-1">Lance inicial</p>
+        </div>
+      </div>
+
+      <!-- Corolla (direita) -->
+      <div class="bg-white rounded-lg shadow overflow-hidden relative">
         <img src="img/toyota-corolla-2019.jpg" alt="Toyota Corolla 2019" class="w-full h-48 object-cover">
+        <span class="absolute top-2 left-2 bg-red-600 text-white px-3 py-1 rounded-md font-bold">R$ 48.000</span>
         <div class="p-4">
-          <h4 class="font-bold">Toyota Corolla 2019</h4>
-          <p class="text-gray-600">Lance inicial: R$ 48.000</p>
+          <h4 class="font-bold text-lg">Toyota Corolla 2019</h4>
+          <p class="text-gray-600 mt-1">Lance inicial</p>
         </div>
       </div>
 
-      <!-- Carro 3 centralizado para telas maiores -->
-      <div class="bg-white rounded-lg shadow overflow-hidden md:col-span-1 md:col-start-2">
-        <img src="img/ford-ka-2021.webp" alt="Ford Ka 2021" class="w-full h-48 object-cover">
-        <div class="p-4">
-          <h4 class="font-bold">Ford Ka 2021</h4>
-          <p class="text-gray-600">Lance inicial: R$ 28.000</p>
-        </div>
-      </div>
     </div>
   </section>
 
