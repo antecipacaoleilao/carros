@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como participar de um leilão de veículos</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Navbar -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
+      <nav class="space-x-6">
+        <a href="../index.html" class="hover:text-blue-600">Início</a>
+        <a href="../blog/index.html" class="text-blue-600 font-bold">Blog</a>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Conteúdo -->
+  <article class="container mx-auto py-12 px-4 max-w-3xl">
+    <h2 class="text-3xl font-bold mb-4">Como participar de um leilão de veículos</h2>
+    <p class="text-gray-700 mb-6">Participar de um leilão de veículos pode ser uma ótima oportunidade de adquirir um carro por um valor abaixo do mercado...</p>
+
+    <h3 class="text-xl font-semibold mb-2">Passo 1: Cadastro</h3>
+    <p class="text-gray-700 mb-4">É necessário realizar o cadastro no site da leiloeira...</p>
+
+    <h3 class="text-xl font-semibold mb-2">Passo 2: Consulta aos editais</h3>
+    <p class="text-gray-700 mb-4">Leia atentamente os editais para entender regras, taxas e condições...</p>
+
+    <h3 class="text-xl font-semibold mb-2">Passo 3: Dar lances</h3>
+    <p class="text-gray-700 mb-4">Os lances podem ser feitos online ou presencialmente...</p>
+
+    <a href="index.html" class="text-blue-600 font-bold hover:underline">← Voltar ao blog</a>
+  </article>
+
+  <!-- Rodapé -->
+  <footer class="bg-white shadow mt-12">
+    <div class="container mx-auto text-center p-6 text-gray-600">
+      <p>© 2025 Leilão Antecipado. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+</body>
+</html>
