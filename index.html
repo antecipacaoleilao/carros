@@ -8,27 +8,25 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
- <!-- Navbar -->
-<header class="bg-white shadow">
-  <div class="container mx-auto flex justify-between items-center p-4">
-    <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
-    <nav class="space-x-6">
-      <a href="index.html" class="text-blue-600 font-bold">Início</a>
-      <a href="editais.html" class="hover:text-blue-600">Editais</a>
-      <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
-      <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
-      <a href="contato.html" class="hover:text-blue-600">Contato</a>
-      <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
-    </nav>
-  </div>
-</header>
+  <!-- Navbar -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
+      <nav class="space-x-6">
+        <a href="index.html" class="text-blue-600 font-bold">Início</a>
+        <a href="editais.html" class="hover:text-blue-600">Editais</a>
+        <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
+        <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
+        <a href="contato.html" class="hover:text-blue-600">Contato</a>
+        <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
+      </nav>
+    </div>
+  </header>
 
-
-  <!-- Banner com imagem -->
-  <section class="relative h-96">
-    <img src="https://images.unsplash.com/photo-1503376780353-7e6692767b70?auto=format&fit=crop&w=1600&q=80" 
-         alt="Banner de carros" 
-         class="absolute inset-0 w-full h-full object-cover opacity-70">
+  <!-- Banner -->
+  <section class="relative h-96 overflow-hidden">
+    <img src="img/toyota-corolla-2019.jpg" alt="Banner de leilão" class="absolute inset-0 w-full h-full object-cover opacity-70">
+    <div class="absolute inset-0 bg-black bg-opacity-50"></div>
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
       <h2 class="text-4xl font-bold mb-4">Leilão Antecipado</h2>
       <p class="text-lg mb-6">Os melhores veículos com condições exclusivas</p>
@@ -36,29 +34,31 @@
     </div>
   </section>
 
-  <!-- Destaques com imagens -->
-  <section class="container mx-auto py-12">
+  <!-- Destaques com imagens locais -->
+  <section class="container mx-auto py-12 px-4">
     <h3 class="text-2xl font-semibold text-center mb-8">Destaques do Leilão</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+      <!-- Carro 1 -->
       <div class="bg-white rounded-lg shadow overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1583121274602-3e2820c69888?auto=format&fit=crop&w=600&q=80" 
-             alt="Honda Civic 2020" class="w-full h-48 object-cover">
+        <img src="img/honda-civic-2020.jpg" alt="Honda Civic 2020" class="w-full h-48 object-cover">
         <div class="p-4">
           <h4 class="font-bold">Honda Civic 2020</h4>
           <p class="text-gray-600">Lance inicial: R$ 45.000</p>
         </div>
       </div>
+
+      <!-- Carro 2 -->
       <div class="bg-white rounded-lg shadow overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1616451191219-8c5e6fb669d0?auto=format&fit=crop&w=600&q=80" 
-             alt="Toyota Corolla 2019" class="w-full h-48 object-cover">
+        <img src="img/toyota-corolla-2019.jpg" alt="Toyota Corolla 2019" class="w-full h-48 object-cover">
         <div class="p-4">
           <h4 class="font-bold">Toyota Corolla 2019</h4>
           <p class="text-gray-600">Lance inicial: R$ 48.000</p>
         </div>
       </div>
-      <div class="bg-white rounded-lg shadow overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1614270532523-e196ec67a5f1?auto=format&fit=crop&w=600&q=80" 
-             alt="Ford Ka 2021" class="w-full h-48 object-cover">
+
+      <!-- Carro 3 centralizado para telas maiores -->
+      <div class="bg-white rounded-lg shadow overflow-hidden md:col-span-1 md:col-start-2">
+        <img src="img/ford-ka-2021.webp" alt="Ford Ka 2021" class="w-full h-48 object-cover">
         <div class="p-4">
           <h4 class="font-bold">Ford Ka 2021</h4>
           <p class="text-gray-600">Lance inicial: R$ 28.000</p>
@@ -76,4 +76,3 @@
 
 </body>
 </html>
-
