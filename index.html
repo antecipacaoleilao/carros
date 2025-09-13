@@ -5,6 +5,15 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Início - Antecipação de Leilão</title>
   <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    /* Overlay genérico */
+    .info-hover {
+      transition: opacity 0.3s ease-in-out;
+    }
+    .group:hover .info-hover {
+      opacity: 1;
+    }
+  </style>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
@@ -12,15 +21,8 @@
   <header class="bg-white shadow">
     <div class="container mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
-      
-      <!-- Botão menu mobile -->
-      <button id="menu-btn" class="block md:hidden text-gray-800 focus:outline-none text-2xl">
-        ☰
-      </button>
-
-      <!-- Links do menu (desktop) -->
-      <nav id="menu" class="hidden md:flex space-x-6">
-        <a href="index.html" class="hover:text-blue-600 font-bold">Início</a>
+      <nav class="space-x-6 hidden md:flex">
+        <a href="index.html" class="text-blue-600 font-bold">Início</a>
         <a href="editais.html" class="hover:text-blue-600">Editais</a>
         <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
         <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
@@ -28,31 +30,12 @@
         <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
       </nav>
     </div>
-
-    <!-- Menu Mobile -->
-    <div id="mobile-menu" class="hidden flex-col space-y-2 px-4 pb-4 md:hidden bg-white shadow">
-      <a href="index.html" class="block hover:text-blue-600 font-bold">Início</a>
-      <a href="editais.html" class="block hover:text-blue-600">Editais</a>
-      <a href="documentos.html" class="block hover:text-blue-600">Documentos</a>
-      <a href="leiloes.html" class="block hover:text-blue-600">Leilões</a>
-      <a href="contato.html" class="block hover:text-blue-600">Contato</a>
-      <a href="blog/index.html" class="block hover:text-blue-600">Blog</a>
-    </div>
   </header>
-
-  <!-- Script do menu -->
-  <script>
-    const menuBtn = document.getElementById("menu-btn");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuBtn.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  </script>
 
   <!-- Banner -->
   <section class="relative h-96">
-    <img src="img/carro1.jpg" alt="Banner de carros" 
+    <img src="img/carro1.jpg" 
+         alt="Banner de carros" 
          class="absolute inset-0 w-full h-full object-cover opacity-70">
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
       <h2 class="text-4xl font-bold mb-4">Leilão Antecipado</h2>
@@ -66,63 +49,76 @@
     <h3 class="text-2xl font-semibold text-center mb-8">Destaques do Leilão</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
 
-    <!-- Carro 1 - Civic (vídeo embed) -->
-<div class="bg-white rounded-lg shadow overflow-hidden flex flex-col relative group">
-  <div class="relative w-full h-48">
-    <iframe class="w-full h-48"
-      src="https://www.youtube.com/embed/mL8kEy6vv-k?rel=0&showinfo=0"
-      title="Honda Civic 2020"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <!-- Overlay ao passar o mouse -->
-  <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
-    <p class="text-lg font-bold">Honda Civic 2020</p>
-    <p>8.338 km rodados</p>
-    <p>Lance inicial: <span class="text-red-400">R$ 8.338</span></p>
-  </div>
-</div>
+      <!-- Civic com vídeo -->
+      <div class="card bg-white rounded-lg shadow-lg overflow-hidden relative group">
+        <!-- Player -->
+        <div class="relative w-full h-52">
+          <iframe class="w-full h-full"
+            src="https://www.youtube.com/embed/mL8kEy6vv-k"
+            title="Honda Civic 2020"
+            frameborder="0"
+            allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+            allowfullscreen>
+          </iframe>
+        </div>
+        <!-- Conteúdo -->
+        <div class="p-4">
+          <h4 class="font-bold text-lg">Honda Civic 2020</h4>
+          <p class="text-sm text-gray-600">Local: São Paulo (SP)</p>
+          <p class="text-sm text-gray-600">KM: 93.380</p>
+        </div>
+        <div class="bg-red-600 text-white text-center py-2 font-bold">
+          Lance inicial: R$ 8.338
+        </div>
+        <!-- Overlay apenas embaixo -->
+        <div class="info-hover absolute bottom-0 left-0 right-0 bg-black bg-opacity-80 text-white flex flex-col justify-center items-center opacity-0 p-4">
+          <p class="text-lg font-semibold">Honda Civic 2020</p>
+          <p>Ano: 2020</p>
+          <p>KM: 93.380</p>
+          <p>Local: São Paulo - SP</p>
+        </div>
+      </div>
 
-<!-- Carro 2 - Corolla (vídeo embed) -->
-<div class="bg-white rounded-lg shadow overflow-hidden flex flex-col relative group">
-  <div class="relative w-full h-48">
-    <iframe class="w-full h-48"
-      src="https://www.youtube.com/embed/Y0eieDlUD7w?rel=0&showinfo=0"
-      title="Toyota Corolla"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <!-- Overlay ao passar o mouse -->
-  <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
-    <p class="text-lg font-bold">Toyota Corolla</p>
-    <p>6.560 km rodados</p>
-    <p>Lance inicial: <span class="text-red-400">R$ 6.560</span></p>
-  </div>
-</div>
+      <!-- Ford Ka (imagem + overlay completo) -->
+      <div class="card bg-white rounded-lg shadow-lg overflow-hidden relative group">
+        <img src="img/ford-ka-2021.webp" alt="Ford Ka 2021" class="w-full h-52 object-cover">
+        <div class="p-4">
+          <h4 class="font-bold text-lg">Ford Ka 2021</h4>
+          <p class="text-sm text-gray-600">Local: Rio de Janeiro (RJ)</p>
+          <p class="text-sm text-gray-600">KM: 72.000</p>
+        </div>
+        <div class="bg-red-600 text-white text-center py-2 font-bold">
+          Lance inicial: R$ 4.875
+        </div>
+        <div class="info-hover absolute inset-0 bg-black bg-opacity-80 text-white flex flex-col justify-center items-center opacity-0">
+          <p class="text-lg font-semibold">Ford Ka 2021</p>
+          <p>Ano: 2021</p>
+          <p>KM: 72.000</p>
+          <p>Local: Rio de Janeiro - RJ</p>
+        </div>
+      </div>
 
-<!-- Carro 3 - Ford Ka (vídeo embed) -->
-<div class="bg-white rounded-lg shadow overflow-hidden flex flex-col relative group">
-  <div class="relative w-full h-48">
-    <iframe class="w-full h-48"
-      src="https://www.youtube.com/embed/ILkcaYxmpJU?rel=0&showinfo=0"
-      title="Ford Ka 2021"
-      frameborder="0"
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-      allowfullscreen>
-    </iframe>
-  </div>
-  <!-- Overlay ao passar o mouse -->
-  <div class="absolute inset-0 bg-black bg-opacity-70 text-white flex flex-col items-center justify-center opacity-0 group-hover:opacity-100 transition">
-    <p class="text-lg font-bold">Ford Ka 2021</p>
-    <p>4.875 km rodados</p>
-    <p>Lance inicial: <span class="text-red-400">R$ 4.875</span></p>
-  </div>
-</div>
+      <!-- Corolla (imagem + overlay completo) -->
+      <div class="card bg-white rounded-lg shadow-lg overflow-hidden relative group">
+        <img src="img/toyota-corolla-2019.jpg" alt="Toyota Corolla 2019" class="w-full h-52 object-cover">
+        <div class="p-4">
+          <h4 class="font-bold text-lg">Toyota Corolla 2019</h4>
+          <p class="text-sm text-gray-600">Local: Belo Horizonte (MG)</p>
+          <p class="text-sm text-gray-600">KM: 65.000</p>
+        </div>
+        <div class="bg-red-600 text-white text-center py-2 font-bold">
+          Lance inicial: R$ 6.560
+        </div>
+        <div class="info-hover absolute inset-0 bg-black bg-opacity-80 text-white flex flex-col justify-center items-center opacity-0">
+          <p class="text-lg font-semibold">Toyota Corolla 2019</p>
+          <p>Ano: 2019</p>
+          <p>KM: 65.000</p>
+          <p>Local: Belo Horizonte - MG</p>
+        </div>
+      </div>
 
+    </div>
+  </section>
 
   <!-- Rodapé -->
   <footer class="bg-white shadow mt-12">
@@ -133,6 +129,3 @@
 
 </body>
 </html>
-
-
-
