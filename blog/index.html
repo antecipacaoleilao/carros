@@ -8,81 +8,71 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar -->
-<header class="bg-white shadow">
-  <div class="container mx-auto flex justify-between items-center p-4">
-    <!-- Logo -->
-    <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
+  <!-- Cabeçalho com menu -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="../index.html" class="hover:text-blue-600">Início</a>
+        <a href="../agenda.html" class="hover:text-blue-600">Agenda</a>
+        <a href="../editais.html" class="hover:text-blue-600">Editais</a>
+        <a href="../documentos.html" class="hover:text-blue-600">Documentos</a>
+        <a href="../leiloes.html" class="hover:text-blue-600">Leilões</a>
+        <a href="../contato.html" class="hover:text-blue-600">Contato</a>
+        <a href="index.html" class="font-bold text-blue-600">Blog</a>
+      </nav>
+      <!-- Botão hambúrguer -->
+      <button id="menu-toggle" class="md:hidden flex flex-col space-y-1">
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-100 px-4 py-2 space-y-2">
+      <a href="../index.html" class="block hover:text-blue-600">Início</a>
+      <a href="../agenda.html" class="block hover:text-blue-600">Agenda</a>
+      <a href="../editais.html" class="block hover:text-blue-600">Editais</a>
+      <a href="../documentos.html" class="block hover:text-blue-600">Documentos</a>
+      <a href="../leiloes.html" class="block hover:text-blue-600">Leilões</a>
+      <a href="../contato.html" class="block hover:text-blue-600">Contato</a>
+      <a href="index.html" class="block hover:text-blue-600">Blog</a>
+    </div>
+  </header>
 
-    <!-- Menu desktop -->
-    <nav class="space-x-6 hidden md:flex">
-      <a href="index.html" class="hover:text-blue-600">Início</a>
-      <a href="agenda.html" class="hover:text-blue-600">Agenda</a>
-      <a href="editais.html" class="hover:text-blue-600">Editais</a>
-      <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
-      <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
-      <a href="contato.html" class="hover:text-blue-600">Contato</a>
-      <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
-    </nav>
-
-    <!-- Botão hambúrguer (visível só no mobile) -->
-    <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
-      ☰
-    </button>
-  </div>
-
-  <!-- Menu mobile (inicialmente escondido) -->
-  <div id="mobile-menu" class="hidden md:hidden bg-gray-100">
-    <nav class="flex flex-col p-4 space-y-2">
-      <a href="index.html" class="hover:text-blue-600">Início</a>
-      <a href="agenda.html" class="hover:text-blue-600">Agenda</a>
-      <a href="editais.html" class="hover:text-blue-600">Editais</a>
-      <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
-      <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
-      <a href="contato.html" class="hover:text-blue-600">Contato</a>
-      <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
-    </nav>
-  </div>
-</header>
-
-<script>
-  // Script para abrir/fechar menu no mobile
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      toggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
     });
-  });
-</script>
-
-  <!-- Hero -->
-  <section class="bg-blue-600 text-white text-center py-12">
-    <h2 class="text-3xl font-bold mb-2">Nosso Blog</h2>
-    <p class="text-lg">Dicas, notícias e informações sobre leilões de veículos.</p>
-  </section>
+  </script>
 
   <!-- Lista de posts -->
-  <section class="container mx-auto py-12 px-4 grid md:grid-cols-2 gap-6">
+  <main class="container mx-auto py-12 px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
+    
     <!-- Post 1 -->
     <a href="post1.html" class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-      <img src="img/post1.jpg" alt="Post 1" class="w-full h-48 object-cover">
-      <div class="p-4">
-        <h3 class="font-bold text-xl mb-2">Como participar de um leilão de veículos</h3>
-        <p class="text-gray-600">Veja o passo a passo para dar seus primeiros lances em leilões...</p>
+      <img src="../img/blog/post1.jpg" alt="Como participar de um leilão" class="w-full h-48 object-cover">
+      <div class="p-4 space-y-2">
+        <h2 class="text-xl font-bold">Como participar de um leilão de veículos</h2>
+        <p class="text-gray-600 text-sm">Dicas essenciais para quem quer entrar no mundo dos leilões e não sabe por onde começar.</p>
       </div>
     </a>
 
     <!-- Post 2 -->
     <a href="post2.html" class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-      <img src="img/post2.jpg" alt="Post 2" class="w-full h-48 object-cover">
-      <div class="p-4">
-        <h3 class="font-bold text-xl mb-2">Principais cuidados antes de arrematar</h3>
-        <p class="text-gray-600">Saiba quais são os pontos de atenção antes de comprar um carro em leilão...</p>
+      <img src="../img/blog/post2.jpg" alt="Vantagens e riscos" class="w-full h-48 object-cover">
+      <div class="p-4 space-y-2">
+        <h2 class="text-xl font-bold">Vantagens e riscos dos leilões de carros</h2>
+        <p class="text-gray-600 text-sm">Conheça os principais pontos positivos e os cuidados necessários antes de dar o lance.</p>
       </div>
     </a>
-  </section>
+
+  </main>
 
   <!-- Rodapé -->
   <footer class="bg-white shadow mt-12">
