@@ -1,0 +1,92 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Como participar de leilões - Blog</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-50 text-gray-800">
+
+  <!-- Cabeçalho -->
+  <header class="bg-white shadow">
+    <div class="container mx-auto flex justify-between items-center p-4">
+      <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
+      <!-- Menu Desktop -->
+      <nav class="hidden md:flex space-x-6">
+        <a href="../index.html" class="hover:text-blue-600">Início</a>
+        <a href="../agenda.html" class="hover:text-blue-600">Agenda</a>
+        <a href="../editais.html" class="hover:text-blue-600">Editais</a>
+        <a href="../documentos.html" class="hover:text-blue-600">Documentos</a>
+        <a href="../leiloes.html" class="hover:text-blue-600">Leilões</a>
+        <a href="../contato.html" class="hover:text-blue-600">Contato</a>
+        <a href="index.html" class="font-bold text-blue-600">Blog</a>
+      </nav>
+      <!-- Botão hambúrguer -->
+      <button id="menu-toggle" class="md:hidden flex flex-col space-y-1">
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-100 px-4 py-2 space-y-2">
+      <a href="../index.html" class="block hover:text-blue-600">Início</a>
+      <a href="../agenda.html" class="block hover:text-blue-600">Agenda</a>
+      <a href="../editais.html" class="block hover:text-blue-600">Editais</a>
+      <a href="../documentos.html" class="block hover:text-blue-600">Documentos</a>
+      <a href="../leiloes.html" class="block hover:text-blue-600">Leilões</a>
+      <a href="../contato.html" class="block hover:text-blue-600">Contato</a>
+      <a href="index.html" class="block hover:text-blue-600">Blog</a>
+    </div>
+  </header>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const mobileMenu = document.getElementById("mobile-menu");
+      toggle.addEventListener("click", () => {
+        mobileMenu.classList.toggle("hidden");
+      });
+    });
+  </script>
+
+  <!-- Conteúdo -->
+  <article class="container mx-auto py-12 px-4 max-w-3xl bg-white rounded-lg shadow">
+    <!-- Imagem de capa -->
+    <img src="../img/blog/post3.jpg" alt="Como participar de leilões" class="w-full h-64 object-cover rounded-t-lg">
+
+    <div class="p-6 space-y-4">
+      <h2 class="text-3xl font-bold">Como participar de um leilão de veículos</h2>
+      <p class="text-gray-600 text-sm">Publicado em 20 de janeiro de 2025 • leitura de 5 min</p>
+
+      <p>Participar de um leilão de veículos pode ser mais simples do que você imagina. Veja o passo a passo:</p>
+
+      <h3 class="text-2xl font-semibold">1. Escolha o leilão</h3>
+      <p>Consulte os editais e agendas para encontrar o leilão que mais se encaixa no que você procura.</p>
+
+      <h3 class="text-2xl font-semibold">2. Faça o cadastro</h3>
+      <p>Antes de dar lances, é necessário se cadastrar no site do leiloeiro e enviar os documentos solicitados.</p>
+
+      <h3 class="text-2xl font-semibold">3. Analise os veículos</h3>
+      <p>Visite o pátio ou veja as fotos e descrições disponíveis online para conhecer o estado real do veículo.</p>
+
+      <h3 class="text-2xl font-semibold">4. Dê seu lance</h3>
+      <p>No dia e horário marcados, participe do leilão online ou presencial e faça sua oferta.</p>
+
+      <h3 class="text-2xl font-semibold">5. Finalize a compra</h3>
+      <p>Se o seu lance for vencedor, siga as instruções do edital para efetuar o pagamento e retirar o veículo.</p>
+
+      <p>Seguindo esses passos, você poderá aproveitar as oportunidades dos leilões de forma segura.</p>
+    </div>
+  </article>
+
+  <!-- Rodapé -->
+  <footer class="bg-white shadow mt-12">
+    <div class="container mx-auto text-center p-6 text-gray-600">
+      <p>© 2025 Leilão Antecipado. Todos os direitos reservados.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
