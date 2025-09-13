@@ -98,26 +98,47 @@
         </div>
       </div>
 
-      <!-- Corolla (imagem + overlay completo) -->
-      <div class="card bg-white rounded-lg shadow-lg overflow-hidden relative group">
-        <img src="img/toyota-corolla-2019.jpg" alt="Toyota Corolla 2019" class="w-full h-52 object-cover">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">Toyota Corolla 2019</h4>
-          <p class="text-sm text-gray-600">Local: Belo Horizonte (MG)</p>
-          <p class="text-sm text-gray-600">KM: 65.000</p>
-        </div>
-        <div class="bg-red-600 text-white text-center py-2 font-bold">
-          Lance inicial: R$ 6.560
-        </div>
-        <div class="info-hover absolute inset-0 bg-black bg-opacity-80 text-white flex flex-col justify-center items-center opacity-0">
-          <p class="text-lg font-semibold">Toyota Corolla 2019</p>
-          <p>Ano: 2019</p>
-          <p>KM: 65.000</p>
-          <p>Local: Belo Horizonte - MG</p>
-        </div>
-      </div>
-
+     <!-- Corolla com Carrossel Automático -->
+<div class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
+  <div class="relative w-full h-48 overflow-hidden">
+    <!-- Container das imagens -->
+    <div id="carousel-corolla" class="flex transition-transform duration-700 ease-in-out">
+      <!-- As imagens serão carregadas pelo JS -->
     </div>
+  </div>
+  <div class="p-4 flex-1">
+    <h4 class="font-bold">Toyota Corolla 2019</h4>
+  </div>
+  <div class="bg-red-600 text-white text-center py-2 font-bold">
+    Lance inicial: R$ 6.560
+  </div>
+</div>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const carousel = document.getElementById("carousel-corolla");
+    const totalImages = 46; // total de imagens do Corolla
+    let index = 0;
+
+    // Carrega dinamicamente as imagens corolla1 até corolla46
+    for (let i = 1; i <= totalImages; i++) {
+      const img = document.createElement("img");
+      img.src = `img/corolla${i}.jpg`; // ajusta caminho
+      img.alt = `Corolla imagem ${i}`;
+      img.className = "w-full h-48 object-cover flex-shrink-0";
+      carousel.appendChild(img);
+    }
+
+    const slides = carousel.children.length;
+
+    // Carrossel automático
+    setInterval(() => {
+      index = (index + 1) % slides;
+      carousel.style.transform = `translateX(-${index * 100}%)`;
+    }, 3000); // troca a cada 3 segundos
+  });
+</script>
+
   </section>
 
   <!-- Rodapé -->
@@ -129,3 +150,4 @@
 
 </body>
 </html>
+
