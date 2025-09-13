@@ -1,80 +1,46 @@
-<!DOCTYPE html>
-<html lang="pt-BR">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Início - Antecipação de Leilão</title>
-  <script src="https://cdn.tailwindcss.com"></script>
-</head>
-<body class="bg-gray-50 text-gray-800">
+<!-- Hero com Banner -->
+<section class="relative">
+  <img src="https://source.unsplash.com/1600x600/?cars" 
+       alt="Banner de carros" 
+       class="w-full h-96 object-cover">
+  <div class="absolute inset-0 bg-black bg-opacity-50 flex flex-col items-center justify-center text-white">
+    <h1 class="text-4xl font-bold mb-4">Leilão Antecipado</h1>
+    <p class="text-lg mb-6">Os melhores veículos com condições exclusivas</p>
+    <a href="editais.html" 
+       class="bg-blue-600 px-6 py-3 rounded font-semibold hover:bg-blue-700">
+      Ver Editais
+    </a>
+  </div>
+</section>
 
-  <!-- Navbar -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
-      <nav class="space-x-6">
-        <a href="index.html" class="text-blue-600 font-bold">Início</a>
-        <a href="editais.html" class="hover:text-blue-600">Editais</a>
-        <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
-        <a href="contato.html" class="hover:text-blue-600">Contato</a>
-      </nav>
-    </div>
-  </header>
+<!-- Galeria de Carros -->
+<section class="container mx-auto py-12">
+  <h2 class="text-2xl font-bold mb-6 text-center">Destaques do Leilão</h2>
+  <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
 
-  <!-- Hero com imagem -->
-  <section class="relative h-[400px] bg-gray-800 text-white">
-    <img src="https://images.unsplash.com/photo-1502877338535-766e1452684a?auto=format&fit=crop&w=1400&q=80" 
-         alt="Carros em leilão" class="absolute inset-0 w-full h-full object-cover opacity-70">
-    <div class="relative z-10 flex flex-col justify-center items-center h-full text-center">
-      <h2 class="text-4xl font-bold mb-4">Antecipe seu Leilão com Segurança</h2>
-      <p class="text-lg mb-6">Agilidade e transparência no processo de arrematação.</p>
-      <a href="editais.html" class="bg-blue-600 text-white px-6 py-3 rounded shadow hover:bg-blue-700">Ver Editais</a>
-    </div>
-  </section>
-
-  <!-- Destaques com imagens -->
-  <section class="container mx-auto py-12">
-    <h3 class="text-2xl font-semibold text-center mb-8">Por que escolher a Antecipação?</h3>
-    <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
-      
-      <!-- Card 1 -->
-      <div class="bg-white rounded-lg shadow overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1605559424843-09e784ebd80c?auto=format&fit=crop&w=800&q=80" 
-             alt="Segurança no processo" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h4 class="font-bold text-lg mb-2">Segurança</h4>
-          <p class="text-gray-600">Garantimos que todo o processo seja transparente e dentro da lei.</p>
-        </div>
-      </div>
-
-      <!-- Card 2 -->
-      <div class="bg-white rounded-lg shadow overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1583267746892-83b6dbca6f8f?auto=format&fit=crop&w=800&q=80" 
-             alt="Agilidade no atendimento" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h4 class="font-bold text-lg mb-2">Agilidade</h4>
-          <p class="text-gray-600">Economize tempo com processos rápidos e sem burocracia.</p>
-        </div>
-      </div>
-
-      <!-- Card 3 -->
-      <div class="bg-white rounded-lg shadow overflow-hidden">
-        <img src="https://images.unsplash.com/photo-1600709736275-86ef348c68a3?auto=format&fit=crop&w=800&q=80" 
-             alt="Facilidade no acesso" class="w-full h-48 object-cover">
-        <div class="p-6">
-          <h4 class="font-bold text-lg mb-2">Facilidade</h4>
-          <p class="text-gray-600">Acesse editais e documentos de forma simples e organizada.</p>
-        </div>
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="https://source.unsplash.com/400x250/?car" alt="Carro 1" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="font-bold">Honda Civic 2020</h3>
+        <p class="text-gray-600">Lance inicial: R$ 45.000</p>
       </div>
     </div>
-  </section>
 
-  <!-- Rodapé -->
-  <footer class="bg-white shadow mt-12">
-    <div class="container mx-auto text-center p-6 text-gray-600">
-      <p>© 2025 Leilão Antecipado. Todos os direitos reservados.</p>
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="https://source.unsplash.com/400x250/?automobile" alt="Carro 2" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="font-bold">Toyota Corolla 2019</h3>
+        <p class="text-gray-600">Lance inicial: R$ 48.000</p>
+      </div>
     </div>
-  </footer>
 
-</body>
-</html>
+    <div class="bg-white shadow rounded-lg overflow-hidden">
+      <img src="https://source.unsplash.com/400x250/?vehicle" alt="Carro 3" class="w-full h-48 object-cover">
+      <div class="p-4">
+        <h3 class="font-bold">Ford Ka 2021</h3>
+        <p class="text-gray-600">Lance inicial: R$ 28.000</p>
+      </div>
+    </div>
+
+  </div>
+</section>
