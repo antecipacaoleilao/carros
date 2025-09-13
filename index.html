@@ -54,19 +54,6 @@
   </div>
 </header>
 
-<script>
-  // Script para abrir/fechar menu no mobile
-  document.addEventListener("DOMContentLoaded", () => {
-    const menuToggle = document.getElementById("menu-toggle");
-    const mobileMenu = document.getElementById("mobile-menu");
-
-    menuToggle.addEventListener("click", () => {
-      mobileMenu.classList.toggle("hidden");
-    });
-  });
-</script>
-
-
   <!-- Banner -->
   <section class="relative h-96">
     <img src="img/carro1.jpg" 
@@ -159,10 +146,12 @@
   <!-- Scripts -->
   <script>
     // Menu hambúrguer
-    const toggle = document.getElementById("menu-toggle");
-    const menu = document.getElementById("mobile-menu");
-    toggle.addEventListener("click", () => {
-      menu.classList.toggle("hidden");
+    document.addEventListener("DOMContentLoaded", () => {
+      const toggle = document.getElementById("menu-toggle");
+      const menu = document.getElementById("mobile-menu");
+      toggle.addEventListener("click", () => {
+        menu.classList.toggle("hidden");
+      });
     });
 
     // Carrossel Corolla
@@ -189,4 +178,3 @@
 
 </body>
 </html>
-
