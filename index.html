@@ -5,21 +5,22 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Início - Antecipação de Leilão</title>
   <script src="https://cdn.tailwindcss.com"></script>
-  <style>
-    .card:hover .info-hover {
-      opacity: 1;
-      transform: translateY(0);
-    }
-  </style>
 </head>
-<body class="bg-gray-100 text-gray-800">
+<body class="bg-gray-50 text-gray-800">
 
   <!-- Navbar -->
   <header class="bg-white shadow">
     <div class="container mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
-      <nav class="space-x-6">
-        <a href="index.html" class="text-blue-600 font-bold">Início</a>
+      
+      <!-- Botão menu mobile -->
+      <button id="menu-btn" class="block md:hidden text-gray-800 focus:outline-none text-2xl">
+        ☰
+      </button>
+
+      <!-- Links do menu (desktop) -->
+      <nav id="menu" class="hidden md:flex space-x-6">
+        <a href="index.html" class="hover:text-blue-600 font-bold">Início</a>
         <a href="editais.html" class="hover:text-blue-600">Editais</a>
         <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
         <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
@@ -27,11 +28,31 @@
         <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
       </nav>
     </div>
+
+    <!-- Menu Mobile -->
+    <div id="mobile-menu" class="hidden flex-col space-y-2 px-4 pb-4 md:hidden bg-white shadow">
+      <a href="index.html" class="block hover:text-blue-600 font-bold">Início</a>
+      <a href="editais.html" class="block hover:text-blue-600">Editais</a>
+      <a href="documentos.html" class="block hover:text-blue-600">Documentos</a>
+      <a href="leiloes.html" class="block hover:text-blue-600">Leilões</a>
+      <a href="contato.html" class="block hover:text-blue-600">Contato</a>
+      <a href="blog/index.html" class="block hover:text-blue-600">Blog</a>
+    </div>
   </header>
 
+  <!-- Script do menu -->
+  <script>
+    const menuBtn = document.getElementById("menu-btn");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuBtn.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  </script>
+
   <!-- Banner -->
-  <section class="relative h-80">
-    <img src="img/carro1.jpg" alt="Banner carros" 
+  <section class="relative h-96">
+    <img src="img/carro1.jpg" alt="Banner de carros" 
          class="absolute inset-0 w-full h-full object-cover opacity-70">
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
       <h2 class="text-4xl font-bold mb-4">Leilão Antecipado</h2>
@@ -40,59 +61,43 @@
     </div>
   </section>
 
-  <!-- Lista de veículos -->
+  <!-- Destaques -->
   <section class="container mx-auto py-12">
     <h3 class="text-2xl font-semibold text-center mb-8">Destaques do Leilão</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
 
-      <!-- Corolla -->
-      <div class="card bg-white rounded-lg shadow-lg overflow-hidden relative">
-        <img src="img/toyota-corolla-2019.jpg" alt="Toyota Corolla 2019" class="w-full h-52 object-cover">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">Toyota Corolla 2019</h4>
-          <p class="text-red-600 font-bold text-xl">R$ 6.560</p>
-        </div>
-        <!-- Hover Info -->
-        <div class="info-hover absolute inset-0 bg-black bg-opacity-80 text-white flex flex-col justify-center items-center opacity-0 transform translate-y-6 transition-all">
-          <p><strong>Ano:</strong> 2019</p>
-          <p><strong>Km:</strong> 45.000</p>
-          <p><strong>Local:</strong> SP</p>
-          <p><strong>Leilão:</strong> 13/09/2025 - 10:00</p>
-          <a href="detalhes-corolla.html" class="mt-4 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Mais Informações</a>
-        </div>
-      </div>
-
       <!-- Civic -->
-      <div class="card bg-white rounded-lg shadow-lg overflow-hidden relative">
-        <img src="img/honda-civic-2020.jpg" alt="Honda Civic 2020" class="w-full h-52 object-cover">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">Honda Civic 2020</h4>
-          <p class="text-red-600 font-bold text-xl">R$ 8.338</p>
+      <a href="veiculos/civic.html" class="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+        <img src="img/honda-civic-2020.jpg" alt="Honda Civic 2020" class="w-full h-48 object-cover">
+        <div class="p-4 flex-1">
+          <h4 class="font-bold">Honda Civic 2020</h4>
         </div>
-        <div class="info-hover absolute inset-0 bg-black bg-opacity-80 text-white flex flex-col justify-center items-center opacity-0 transform translate-y-6 transition-all">
-          <p><strong>Ano:</strong> 2020</p>
-          <p><strong>Km:</strong> 30.000</p>
-          <p><strong>Local:</strong> RJ</p>
-          <p><strong>Leilão:</strong> 13/09/2025 - 10:00</p>
-          <a href="detalhes-civic.html" class="mt-4 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Mais Informações</a>
+        <div class="bg-red-600 text-white text-center py-2 font-bold">
+          Lance inicial: R$ 8.338
         </div>
-      </div>
+      </a>
 
       <!-- Ford Ka -->
-      <div class="card bg-white rounded-lg shadow-lg overflow-hidden relative">
-        <img src="img/ford-ka-2021.webp" alt="Ford Ka 2021" class="w-full h-52 object-cover">
-        <div class="p-4">
-          <h4 class="font-bold text-lg">Ford Ka 2021</h4>
-          <p class="text-red-600 font-bold text-xl">R$ 4.875</p>
+      <a href="veiculos/ford-ka.html" class="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+        <img src="img/ford-ka-2021.webp" alt="Ford Ka 2021" class="w-full h-48 object-cover">
+        <div class="p-4 flex-1">
+          <h4 class="font-bold">Ford Ka 2021</h4>
         </div>
-        <div class="info-hover absolute inset-0 bg-black bg-opacity-80 text-white flex flex-col justify-center items-center opacity-0 transform translate-y-6 transition-all">
-          <p><strong>Ano:</strong> 2021</p>
-          <p><strong>Km:</strong> 28.000</p>
-          <p><strong>Local:</strong> MG</p>
-          <p><strong>Leilão:</strong> 13/09/2025 - 10:00</p>
-          <a href="detalhes-fordka.html" class="mt-4 bg-blue-600 px-4 py-2 rounded hover:bg-blue-700">Mais Informações</a>
+        <div class="bg-red-600 text-white text-center py-2 font-bold">
+          Lance inicial: R$ 4.875
         </div>
-      </div>
+      </a>
+
+      <!-- Corolla -->
+      <a href="veiculos/corolla.html" class="block bg-white rounded-lg shadow overflow-hidden hover:shadow-lg transition">
+        <img src="img/toyota-corolla-2019.jpg" alt="Toyota Corolla 2019" class="w-full h-48 object-cover">
+        <div class="p-4 flex-1">
+          <h4 class="font-bold">Toyota Corolla 2019</h4>
+        </div>
+        <div class="bg-red-600 text-white text-center py-2 font-bold">
+          Lance inicial: R$ 6.560
+        </div>
+      </a>
 
     </div>
   </section>
