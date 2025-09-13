@@ -23,10 +23,9 @@
     </div>
   </header>
 
-  <!-- Banner com imagem -->
+  <!-- Banner -->
   <section class="relative h-96">
-    <img src="img/carro1.jpg" 
-         alt="Banner de carros" 
+    <img src="img/carro1.jpg" alt="Banner de carros"
          class="absolute inset-0 w-full h-full object-cover opacity-70">
     <div class="relative z-10 flex flex-col items-center justify-center h-full text-white text-center px-4">
       <h2 class="text-4xl font-bold mb-4">Leilão Antecipado</h2>
@@ -35,49 +34,70 @@
     </div>
   </section>
 
-  <!-- Destaques com imagens -->
+  <!-- Destaques -->
   <section class="container mx-auto py-12">
     <h3 class="text-2xl font-semibold text-center mb-8">Destaques do Leilão</h3>
+
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
-      
+
       <!-- Civic -->
-      <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-        <img src="img/honda-civic-2020.jpg" alt="Honda Civic 2020" class="w-full h-48 object-cover">
-        <div class="p-4 flex-1">
-          <h4 class="font-bold">Honda Civic 2020</h4>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border hover:shadow-xl transition-all duration-300">
+        <div class="relative w-full h-48 overflow-hidden">
+          <img src="img/honda-civic-2020.jpg" alt="Honda Civic 2020" class="w-full h-full object-cover">
+          <span class="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full">Disponível</span>
         </div>
-        <div class="bg-red-600 text-white text-center py-2 font-bold">
-          Lance inicial: R$ 8.338
+        <div class="p-4 space-y-2">
+          <h4 class="text-lg font-semibold">Honda Civic 2020</h4>
+          <p class="text-sm text-gray-600">Local: SP • 52.000 km</p>
+          <div class="mt-3">
+            <span class="block text-gray-500 text-xs">Lance Atual</span>
+            <span class="text-xl font-bold text-red-600">R$ 8.338</span>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-3 text-center">
+          <a href="detalhes-civic.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Ver Detalhes</a>
         </div>
       </div>
 
       <!-- Ford Ka -->
-      <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-        <img src="img/ford-ka-2021.webp" alt="Ford Ka 2021" class="w-full h-48 object-cover">
-        <div class="p-4 flex-1">
-          <h4 class="font-bold">Ford Ka 2021</h4>
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border hover:shadow-xl transition-all duration-300">
+        <div class="relative w-full h-48 overflow-hidden">
+          <img src="img/ford-ka-2021.webp" alt="Ford Ka 2021" class="w-full h-full object-cover">
+          <span class="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full">Disponível</span>
         </div>
-        <div class="bg-red-600 text-white text-center py-2 font-bold">
-          Lance inicial: R$ 4.875
+        <div class="p-4 space-y-2">
+          <h4 class="text-lg font-semibold">Ford Ka 2021</h4>
+          <p class="text-sm text-gray-600">Local: RJ • 38.000 km</p>
+          <div class="mt-3">
+            <span class="block text-gray-500 text-xs">Lance Atual</span>
+            <span class="text-xl font-bold text-red-600">R$ 4.875</span>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-3 text-center">
+          <a href="detalhes-fordka.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Ver Detalhes</a>
         </div>
       </div>
 
-   <!-- Corolla com Carrossel Automático -->
-<div class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-  <div class="relative w-full h-48 overflow-hidden">
-    <!-- Imagens do carrossel -->
-    <div id="carousel-corolla" class="flex transition-transform duration-700 ease-in-out">
-      <!-- As imagens serão carregadas pelo JS -->
-    </div>
-  </div>
-  <div class="p-4 flex-1">
-    <h4 class="font-bold">Toyota Corolla 2019</h4>
-  </div>
-  <div class="bg-red-600 text-white text-center py-2 font-bold">
-    Lance inicial: R$ 6.560
-  </div>
-</div>
+      <!-- Corolla -->
+      <div class="bg-white rounded-lg shadow-md overflow-hidden border hover:shadow-xl transition-all duration-300">
+        <div class="relative w-full h-48 overflow-hidden">
+          <img src="img/toyota-corolla-2019.jpg" alt="Toyota Corolla 2019" class="w-full h-full object-cover">
+          <span class="absolute top-2 left-2 bg-green-600 text-white text-xs px-2 py-1 rounded-full">Disponível</span>
+        </div>
+        <div class="p-4 space-y-2">
+          <h4 class="text-lg font-semibold">Toyota Corolla 2019</h4>
+          <p class="text-sm text-gray-600">Local: BA • 41.500 km</p>
+          <div class="mt-3">
+            <span class="block text-gray-500 text-xs">Lance Atual</span>
+            <span class="text-xl font-bold text-red-600">R$ 6.560</span>
+          </div>
+        </div>
+        <div class="bg-gray-100 p-3 text-center">
+          <a href="detalhes-corolla.html" class="bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700 transition">Ver Detalhes</a>
+        </div>
+      </div>
 
+    </div>
   </section>
 
   <!-- Rodapé -->
@@ -89,5 +109,3 @@
 
 </body>
 </html>
-
-
