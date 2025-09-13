@@ -21,6 +21,7 @@
   <header class="bg-white shadow">
     <div class="container mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
+      <!-- Menu desktop -->
       <nav class="space-x-6 hidden md:flex">
         <a href="index.html" class="text-blue-600 font-bold">Início</a>
         <a href="agenda.html" class="hover:text-blue-600">Agenda</a>
@@ -30,6 +31,22 @@
         <a href="contato.html" class="hover:text-blue-600">Contato</a>
         <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
       </nav>
+      <!-- Botão hambúrguer -->
+      <button id="menu-toggle" class="md:hidden flex flex-col space-y-1">
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-100 px-4 py-2 space-y-2">
+      <a href="index.html" class="block text-blue-600 font-bold">Início</a>
+      <a href="agenda.html" class="block hover:text-blue-600">Agenda</a>
+      <a href="editais.html" class="block hover:text-blue-600">Editais</a>
+      <a href="documentos.html" class="block hover:text-blue-600">Documentos</a>
+      <a href="leiloes.html" class="block hover:text-blue-600">Leilões</a>
+      <a href="contato.html" class="block hover:text-blue-600">Contato</a>
+      <a href="blog/index.html" class="block hover:text-blue-600">Blog</a>
     </div>
   </header>
 
@@ -80,7 +97,7 @@
         </div>
       </div>
 
-      <!-- Ford Ka (imagem + overlay completo) -->
+      <!-- Ford Ka -->
       <div class="card bg-white rounded-lg shadow-lg overflow-hidden relative group">
         <img src="img/ford-ka-2021.webp" alt="Ford Ka 2021" class="w-full h-52 object-cover">
         <div class="p-4">
@@ -99,47 +116,20 @@
         </div>
       </div>
 
-     <!-- Corolla com Carrossel Automático -->
-<div class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-  <div class="relative w-full h-48 overflow-hidden">
-    <!-- Container das imagens -->
-    <div id="carousel-corolla" class="flex transition-transform duration-700 ease-in-out">
-      <!-- As imagens serão carregadas pelo JS -->
+      <!-- Corolla com carrossel -->
+      <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
+        <div class="relative w-full h-48 overflow-hidden">
+          <div id="carousel-corolla" class="flex transition-transform duration-700 ease-in-out"></div>
+        </div>
+        <div class="p-4 flex-1">
+          <h4 class="font-bold">Toyota Corolla 2019</h4>
+        </div>
+        <div class="bg-red-600 text-white text-center py-2 font-bold">
+          Lance inicial: R$ 6.560
+        </div>
+      </div>
+
     </div>
-  </div>
-  <div class="p-4 flex-1">
-    <h4 class="font-bold">Toyota Corolla 2019</h4>
-  </div>
-  <div class="bg-red-600 text-white text-center py-2 font-bold">
-    Lance inicial: R$ 6.560
-  </div>
-</div>
-
-<script>
-  document.addEventListener("DOMContentLoaded", () => {
-    const carousel = document.getElementById("carousel-corolla");
-    const totalImages = 46; // total de imagens do Corolla
-    let index = 0;
-
-    // Carrega dinamicamente as imagens corolla1 até corolla46
-    for (let i = 1; i <= totalImages; i++) {
-      const img = document.createElement("img");
-      img.src = `img/corolla${i}.jpg`; // ajusta caminho
-      img.alt = `Corolla imagem ${i}`;
-      img.className = "w-full h-48 object-cover flex-shrink-0";
-      carousel.appendChild(img);
-    }
-
-    const slides = carousel.children.length;
-
-    // Carrossel automático
-    setInterval(() => {
-      index = (index + 1) % slides;
-      carousel.style.transform = `translateX(-${index * 100}%)`;
-    }, 3000); // troca a cada 3 segundos
-  });
-</script>
-
   </section>
 
   <!-- Rodapé -->
@@ -149,8 +139,36 @@
     </div>
   </footer>
 
+  <!-- Scripts -->
+  <script>
+    // Menu hambúrguer
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+
+    // Carrossel Corolla
+    document.addEventListener("DOMContentLoaded", () => {
+      const carousel = document.getElementById("carousel-corolla");
+      const totalImages = 46;
+      let index = 0;
+
+      for (let i = 1; i <= totalImages; i++) {
+        const img = document.createElement("img");
+        img.src = `img/corolla${i}.jpg`;
+        img.alt = `Corolla imagem ${i}`;
+        img.className = "w-full h-48 object-cover flex-shrink-0";
+        carousel.appendChild(img);
+      }
+
+      const slides = carousel.children.length;
+      setInterval(() => {
+        index = (index + 1) % slides;
+        carousel.style.transform = `translateX(-${index * 100}%)`;
+      }, 3000);
+    });
+  </script>
+
 </body>
 </html>
-
-
-
