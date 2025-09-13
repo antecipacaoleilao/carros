@@ -66,20 +66,25 @@
     <h3 class="text-2xl font-semibold text-center mb-8">Destaques do Leilão</h3>
     <div class="grid grid-cols-1 md:grid-cols-3 gap-6 px-4">
 
-     <!-- Civic com imagem + botão para vídeo -->
+     <!-- Civic com vídeo embed -->
 <div class="bg-white rounded-lg shadow overflow-hidden flex flex-col">
-  <img src="img/honda-civic-2020.jpg" alt="Honda Civic 2020" class="w-full h-48 object-cover">
+  <div class="relative w-full h-48">
+    <iframe class="w-full h-48"
+      src="https://www.youtube.com/embed/mL8kEy6vv-k?rel=0&showinfo=0"
+      title="Honda Civic 2020"
+      frameborder="0"
+      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
+      allowfullscreen>
+    </iframe>
+  </div>
   <div class="p-4 flex-1">
     <h4 class="font-bold">Honda Civic 2020</h4>
-    <a href="https://youtu.be/mL8kEy6vv-k" target="_blank"
-       class="mt-2 inline-block bg-blue-600 text-white px-4 py-2 rounded hover:bg-blue-700">
-      Ver Vídeo
-    </a>
   </div>
   <div class="bg-red-600 text-white text-center py-2 font-bold">
     Lance inicial: R$ 8.338
   </div>
 </div>
+
 
 
       <!-- Ford Ka -->
@@ -116,4 +121,5 @@
 
 </body>
 </html>
+
 
