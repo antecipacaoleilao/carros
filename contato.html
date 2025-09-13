@@ -16,7 +16,6 @@
         <a href="index.html" class="hover:text-blue-600">Início</a>
         <a href="editais.html" class="hover:text-blue-600">Editais</a>
         <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
-        <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
         <a href="contato.html" class="text-blue-600 font-bold">Contato</a>
       </nav>
     </div>
@@ -31,7 +30,7 @@
   <!-- Formulário de Contato -->
   <section class="container mx-auto py-12">
     <div class="bg-white shadow rounded-lg p-6 max-w-lg mx-auto">
-      <form action="https://formsubmit.co/nelsonhoinef@gmail.com" method="POST" class="space-y-4">
+      <form id="contatoForm" action="https://formsubmit.co/nelsonhoinef@gmail.com" method="POST" class="space-y-4">
         
         <!-- Redireciona para a página obrigado -->
         <input type="hidden" name="_next" value="https://antecipacaoleilao.github.io/carros/obrigado.html">
@@ -41,27 +40,26 @@
         <!-- Nome -->
         <div>
           <label class="block font-semibold mb-1">Nome</label>
-          <input type="text" name="nome" required 
-                 class="w-full border p-2 rounded">
+          <input type="text" name="nome" required class="w-full border p-2 rounded">
         </div>
 
         <!-- E-mail -->
         <div>
           <label class="block font-semibold mb-1">E-mail</label>
-          <input type="email" name="email" required 
-                 class="w-full border p-2 rounded">
+          <input type="email" name="email" required class="w-full border p-2 rounded">
         </div>
 
         <!-- Mensagem -->
         <div>
           <label class="block font-semibold mb-1">Mensagem</label>
-          <textarea name="mensagem" rows="4" required 
-                    class="w-full border p-2 rounded"></textarea>
+          <textarea name="mensagem" rows="4" required class="w-full border p-2 rounded"></textarea>
         </div>
 
+        <!-- Erro -->
+        <p id="erroMsg" class="text-red-600 font-semibold hidden"></p>
+
         <!-- Botão -->
-        <button type="submit" 
-                class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
+        <button type="submit" class="w-full bg-blue-600 text-white py-2 rounded hover:bg-blue-700">
           Enviar
         </button>
       </form>
@@ -74,6 +72,35 @@
       <p>© 2025 Leilão Antecipado. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <!-- Validação em Português -->
+  <script>
+    document.getElementById("contatoForm").addEventListener("submit", function(event) {
+      let nome = document.querySelector("input[name='nome']").value.trim();
+      let email = document.querySelector("input[name='email']").value.trim();
+      let mensagem = document.querySelector("textarea[name='mensagem']").value.trim();
+      let erroMsg = document.getElementById("erroMsg");
+
+      // Regex básico para validar email
+      let emailRegex = /^[^\\s@]+@[^\\s@]+\\.[^\\s@]+$/;
+
+      if (!nome || !email || !mensagem) {
+        erroMsg.textContent = "⚠️ Preencha todos os campos antes de enviar.";
+        erroMsg.classList.remove("hidden");
+        event.preventDefault();
+        return;
+      }
+
+      if (!emailRegex.test(email)) {
+        erroMsg.textContent = "⚠️ Insira um e-mail válido.";
+        erroMsg.classList.remove("hidden");
+        event.preventDefault();
+        return;
+      }
+
+      erroMsg.classList.add("hidden"); // limpa o erro se estiver tudo ok
+    });
+  </script>
 
 </body>
 </html>
