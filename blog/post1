@@ -53,6 +53,7 @@
 
   <!-- Conteúdo -->
   <article class="container mx-auto py-12 px-4 max-w-3xl bg-white rounded-lg shadow">
+    <!-- Imagem de capa -->
     <img src="../img/blog/post1.jpg" alt="Como participar de um leilão" class="w-full h-64 object-cover rounded-t-lg">
 
     <div class="p-6 space-y-4">
