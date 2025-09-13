@@ -8,21 +8,54 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
- <!-- Navbar -->
-  <header class="bg-white shadow">
-    <div class="container mx-auto flex justify-between items-center p-4">
-      <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
-      <nav class="space-x-6 hidden md:flex">
-        <a href="index.html" class="text-blue-600 font-bold">Início</a>
-        <a href="agenda.html" class="hover:text-blue-600">Agenda</a>
-        <a href="editais.html" class="hover:text-blue-600">Editais</a>
-        <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
-        <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
-        <a href="contato.html" class="hover:text-blue-600">Contato</a>
-        <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
-      </nav>
-    </div>
-  </header>
+<!-- Navbar -->
+<header class="bg-white shadow">
+  <div class="container mx-auto flex justify-between items-center p-4">
+    <!-- Logo -->
+    <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
+
+    <!-- Menu desktop -->
+    <nav class="space-x-6 hidden md:flex">
+      <a href="index.html" class="hover:text-blue-600">Início</a>
+      <a href="agenda.html" class="hover:text-blue-600">Agenda</a>
+      <a href="editais.html" class="hover:text-blue-600">Editais</a>
+      <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
+      <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
+      <a href="contato.html" class="hover:text-blue-600">Contato</a>
+      <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
+    </nav>
+
+    <!-- Botão hambúrguer (visível só no mobile) -->
+    <button id="menu-toggle" class="md:hidden text-gray-700 focus:outline-none">
+      ☰
+    </button>
+  </div>
+
+  <!-- Menu mobile (inicialmente escondido) -->
+  <div id="mobile-menu" class="hidden md:hidden bg-gray-100">
+    <nav class="flex flex-col p-4 space-y-2">
+      <a href="index.html" class="hover:text-blue-600">Início</a>
+      <a href="agenda.html" class="hover:text-blue-600">Agenda</a>
+      <a href="editais.html" class="hover:text-blue-600">Editais</a>
+      <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
+      <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
+      <a href="contato.html" class="hover:text-blue-600">Contato</a>
+      <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
+    </nav>
+  </div>
+</header>
+
+<script>
+  // Script para abrir/fechar menu no mobile
+  document.addEventListener("DOMContentLoaded", () => {
+    const menuToggle = document.getElementById("menu-toggle");
+    const mobileMenu = document.getElementById("mobile-menu");
+
+    menuToggle.addEventListener("click", () => {
+      mobileMenu.classList.toggle("hidden");
+    });
+  });
+</script>
 
   <!-- Hero -->
   <section class="bg-blue-600 text-white text-center py-12">
