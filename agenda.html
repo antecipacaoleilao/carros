@@ -8,44 +8,70 @@
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Navbar igual ao resto do site -->
+  <!-- Navbar com hambúrguer -->
   <header class="bg-white shadow">
     <div class="container mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
-      <nav class="space-x-6">
+      <nav class="hidden md:flex space-x-6">
         <a href="index.html" class="hover:text-blue-600">Início</a>
         <a href="editais.html" class="hover:text-blue-600">Editais</a>
         <a href="documentos.html" class="hover:text-blue-600">Documentos</a>
         <a href="leiloes.html" class="hover:text-blue-600">Leilões</a>
-        <a href="agenda.html" class="text-blue-600 font-bold">Agenda</a>
         <a href="contato.html" class="hover:text-blue-600">Contato</a>
         <a href="blog/index.html" class="hover:text-blue-600">Blog</a>
       </nav>
+      <!-- Botão hambúrguer -->
+      <button id="menu-toggle" class="md:hidden flex flex-col space-y-1">
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+        <span class="w-6 h-0.5 bg-gray-800"></span>
+      </button>
+    </div>
+    <!-- Menu mobile -->
+    <div id="mobile-menu" class="hidden md:hidden bg-gray-100 px-4 py-2 space-y-2">
+      <a href="index.html" class="block hover:text-blue-600">Início</a>
+      <a href="editais.html" class="block hover:text-blue-600">Editais</a>
+      <a href="documentos.html" class="block hover:text-blue-600">Documentos</a>
+      <a href="leiloes.html" class="block hover:text-blue-600">Leilões</a>
+      <a href="contato.html" class="block hover:text-blue-600">Contato</a>
+      <a href="blog/index.html" class="block hover:text-blue-600">Blog</a>
     </div>
   </header>
 
-  <!-- Se o iframe funcionar -->
+  <!-- Agenda -->
   <section class="container mx-auto py-12 px-4">
-    <h2 class="text-2xl font-semibold mb-4">Agenda VIP Leilões</h2>
-    <iframe src="https://www.vipleiloes.com.br/leilao/agendaLeilao" width="100%" height="800" frameborder="0"></iframe>
-  </section>
-
-  <!-- Fallback se iframe não puder -->
-  <section class="container mx-auto py-12 px-4">
-    <h2 class="text-2xl font-semibold mb-4">Próximos Leilões</h2>
-    <ul class="space-y-4">
-      <li class="bg-white shadow rounded-lg p-4">
-        <p><strong>Estado:</strong> São Paulo (SP)</p>
-        <p><strong>Data:</strong> 25/09/2025 - 10h</p>
-        <p><strong>Local:</strong> Rodovia Principal, Lote 5</p>
-      </li>
-      <li class="bg-white shadow rounded-lg p-4">
-        <p><strong>Estado:</strong> Paraná (PR)</p>
-        <p><strong>Data:</strong> 28/09/2025 - 14h</p>
-        <p><strong>Local:</strong> Avenida Central, Galpão 3</p>
-      </li>
-      <!-- outros leilões -->
-    </ul>
+    <h2 class="text-2xl font-semibold text-center mb-8">Agenda de Leilões</h2>
+    
+    <div class="overflow-x-auto">
+      <table class="min-w-full bg-white border border-gray-200 rounded-lg shadow">
+        <thead class="bg-blue-600 text-white">
+          <tr>
+            <th class="py-3 px-4 text-left">Data</th>
+            <th class="py-3 px-4 text-left">Horário</th>
+            <th class="py-3 px-4 text-left">Local</th>
+            <th class="py-3 px-4 text-left">Tipo</th>
+            <th class="py-3 px-4 text-left">Descrição</th>
+          </tr>
+        </thead>
+        <tbody class="divide-y divide-gray-200">
+          <tr>
+            <td class="py-3 px-4">13/09/2025</td>
+            <td class="py-3 px-4">10:00</td>
+            <td class="py-3 px-4">São Paulo/SP</td>
+            <td class="py-3 px-4">Presencial</td>
+            <td class="py-3 px-4">Veículos leves e pesados</td>
+          </tr>
+          <tr>
+            <td class="py-3 px-4">15/09/2025</td>
+            <td class="py-3 px-4">14:00</td>
+            <td class="py-3 px-4">Online</td>
+            <td class="py-3 px-4">Virtual</td>
+            <td class="py-3 px-4">Automóveis diversos</td>
+          </tr>
+          <!-- Aqui você pode ir adicionando as próximas linhas da agenda -->
+        </tbody>
+      </table>
+    </div>
   </section>
 
   <!-- Rodapé -->
@@ -54,5 +80,15 @@
       <p>© 2025 Leilão Antecipado. Todos os direitos reservados.</p>
     </div>
   </footer>
+
+  <!-- Script para menu mobile -->
+  <script>
+    const toggle = document.getElementById("menu-toggle");
+    const menu = document.getElementById("mobile-menu");
+    toggle.addEventListener("click", () => {
+      menu.classList.toggle("hidden");
+    });
+  </script>
+
 </body>
 </html>
