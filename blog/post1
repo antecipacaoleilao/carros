@@ -3,12 +3,12 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Blog - Leilão Antecipado</title>
+  <title>Como participar de um leilão - Blog</title>
   <script src="https://cdn.tailwindcss.com"></script>
 </head>
 <body class="bg-gray-50 text-gray-800">
 
-  <!-- Cabeçalho com menu -->
+  <!-- Cabeçalho -->
   <header class="bg-white shadow">
     <div class="container mx-auto flex justify-between items-center p-4">
       <h1 class="text-xl font-bold text-blue-600">Leilão Antecipado</h1>
@@ -51,28 +51,31 @@
     });
   </script>
 
-  <!-- Lista de posts -->
-  <main class="container mx-auto py-12 px-4 grid md:grid-cols-2 lg:grid-cols-3 gap-6">
-    
-    <!-- Post 1 -->
-    <a href="post1.html" class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-      <img src="../img/blog/post1.jpg" alt="Como participar de um leilão" class="w-full h-48 object-cover">
-      <div class="p-4 space-y-2">
-        <h2 class="text-xl font-bold">Como participar de um leilão de veículos</h2>
-        <p class="text-gray-600 text-sm">Dicas essenciais para quem quer entrar no mundo dos leilões e não sabe por onde começar.</p>
-      </div>
-    </a>
+  <!-- Conteúdo -->
+  <article class="container mx-auto py-12 px-4 max-w-3xl bg-white rounded-lg shadow">
+    <img src="../img/blog/post1.jpg" alt="Como participar de um leilão" class="w-full h-64 object-cover rounded-t-lg">
 
-    <!-- Post 2 -->
-    <a href="post2.html" class="bg-white rounded-lg shadow hover:shadow-lg transition overflow-hidden">
-      <img src="../img/blog/post2.jpg" alt="Vantagens e riscos" class="w-full h-48 object-cover">
-      <div class="p-4 space-y-2">
-        <h2 class="text-xl font-bold">Vantagens e riscos dos leilões de carros</h2>
-        <p class="text-gray-600 text-sm">Conheça os principais pontos positivos e os cuidados necessários antes de dar o lance.</p>
-      </div>
-    </a>
+    <div class="p-6 space-y-4">
+      <h2 class="text-3xl font-bold">Como participar de um leilão de veículos</h2>
+      <p class="text-gray-600 text-sm">Publicado em 15 de janeiro de 2025 • leitura de 5 min</p>
 
-  </main>
+      <p>Participar de um leilão de veículos pode ser uma ótima oportunidade para adquirir um carro por um preço mais acessível. No entanto, é fundamental conhecer os passos antes de dar seu primeiro lance.</p>
+
+      <h3 class="text-2xl font-semibold">1. Leia o edital</h3>
+      <p>O edital é o documento mais importante do leilão. Ele contém todas as regras, taxas, condições de pagamento e informações sobre os veículos. Nunca participe sem ler com atenção.</p>
+
+      <h3 class="text-2xl font-semibold">2. Faça o cadastro no site</h3>
+      <p>Para participar de leilões online, é necessário realizar um cadastro na plataforma do leiloeiro, enviando seus documentos e comprovante de residência.</p>
+
+      <h3 class="text-2xl font-semibold">3. Visite o pátio</h3>
+      <p>Sempre que possível, vá até o local onde os veículos estão disponíveis para visitação. Isso ajuda a avaliar melhor o estado do carro e evitar surpresas.</p>
+
+      <h3 class="text-2xl font-semibold">4. Defina seu limite</h3>
+      <p>Antes de dar lances, defina o valor máximo que está disposto a pagar. Isso ajuda a evitar empolgação durante o leilão.</p>
+
+      <p>Seguindo esses passos, você aumenta suas chances de fazer um bom negócio em um leilão de veículos.</p>
+    </div>
+  </article>
 
   <!-- Rodapé -->
   <footer class="bg-white shadow mt-12">
@@ -80,5 +83,6 @@
       <p>© 2025 Leilão Antecipado. Todos os direitos reservados.</p>
     </div>
   </footer>
+
 </body>
 </html>
