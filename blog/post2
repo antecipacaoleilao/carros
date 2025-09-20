@@ -54,7 +54,7 @@
   <!-- Conteúdo -->
   <article class="container mx-auto py-12 px-4 max-w-3xl bg-white rounded-lg shadow">
     <!-- Imagem de capa -->
-    <img src="../img/blog/post2.jpg" alt="Vantagens e riscos" class="w-full h-64 object-cover rounded-t-lg">
+    <img src="https://blog.leiloesjudiciais.com.br/wp-content/uploads/2023/05/leil%C3%A3o-judicial-guia-768x512.png" alt="Vantagens e riscos" class="w-full h-64 object-cover rounded-t-lg">
 
     <div class="p-6 space-y-4">
       <h2 class="text-3xl font-bold">Vantagens e riscos dos leilões de veículos</h2>
